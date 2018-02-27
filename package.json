@@ -6,7 +6,7 @@
     "start": "bsb -make-world -w",
     "clean": "bsb -clean-world",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack:dev": "webpack --mode development"
+    "parcel:dev": "parcel ./src/index.html"
   },
   "keywords": [
     "BuckleScript"
@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "bs-platform": "^2.1.0",
-    "webpack": "^4.0.1",
-    "webpack-cli": "^2.0.9"
+    "bsb-js": "^1.0.2",
+    "parcel-bundler": "^1.6.2"
   }
 }
