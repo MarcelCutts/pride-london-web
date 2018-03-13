@@ -18,10 +18,10 @@
     "bs-css": "^6.3.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "reason-react": "^0.3.2"
+    "reason-react": "^0.3.4"
   },
   "devDependencies": {
-    "bs-platform": "2.1.0",
+    "bs-platform": "^2.2.2",
     "bsb-js": "^1.0.2",
     "parcel-bundler": "^1.6.2"
   }
