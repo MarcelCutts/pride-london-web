@@ -7,12 +7,17 @@ module Styles = {
       color(red),
       display(flexBox),
       justifyContent(center),
-      alignContent(center)
+      alignContent(center),
     ]);
 };
 
 let make = (~message, _children) => {
   ...component,
   render: _self =>
-    <div className=Styles.text> (message |> ReasonReact.stringToElement) </div>
+    <div>
+      <div className=Styles.text>
+        (message |> ReasonReact.stringToElement)
+      </div>
+      <div className=Styles.text> <Goodbye /> </div>
+    </div>
 };
