@@ -13,10 +13,7 @@ module Styles = {
   let text = style([color(red), display(flexBox)]);
 };
 
-let make =  _children => {
+let make = _children => {
   ...component,
-  render: _self =>
-    <div className=Styles.page>
-      <Splash />
-    </div>,
+  render: _self => <div className=Styles.page> <Splash /> </div>,
 };
