@@ -18,6 +18,6 @@ let make = (~message, _children) => {
       <div className=Styles.text>
         (message |> ReasonReact.stringToElement)
       </div>
-      <div className=Styles.text> <Goodbye /> </div>
+      <div className=Styles.text> <Goodbye name="Alice" /> </div>
     </div>
 };
