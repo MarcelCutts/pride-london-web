@@ -5,8 +5,9 @@
     "build": "bsb -make-world",
     "start": "bsb -make-world -w",
     "clean": "bsb -clean-world",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "parcel ./src/index.html",
+    "test": "bsb -make-world && jest",
+    "test:watch": "bsb -make-world && jest --watch",
+    "serve": "parcel ./src/index.html",
     "prod": "parcel build ./src/index.html --public-url ./"
   },
   "keywords": [
@@ -21,8 +22,19 @@
     "reason-react": "^0.3.4"
   },
   "devDependencies": {
+    "@glennsl/bs-jest": "^0.4.2",
+    "bs-enzyme": "^0.3.1",
     "bs-platform": "^2.2.2",
     "bsb-js": "^1.0.2",
+    "enzyme-adapter-react-16": "^1.1.1",
     "parcel-bundler": "^1.6.2"
+  },
+  "jest": {
+    "testMatch": [
+      "**/?(*_)(spec|test).bs.js"
+    ],
+    "setupFiles": [
+      "./src/configuration/jest.config.js"
+    ]
   }
 }

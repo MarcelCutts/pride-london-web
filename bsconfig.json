@@ -4,19 +4,15 @@
   an issue! */
 {
   "name": "react-template",
-  "reason": {"react-jsx" : 2},
-  "sources": [
-    "src"
+  "reason": { "react-jsx": 2 },
+  "sources": [{ "dir": "src", "subdirs": true }],
+  "package-specs": [
+    {
+      "module": "commonjs"
+    }
   ],
-  "package-specs": [{
-    "module": "commonjs",
-    "in-source": true
-  }],
   "suffix": ".bs.js",
   "namespace": true,
-  "bs-dependencies": [
-    "reason-react",
-    "bs-css"
-  ],
+  "bs-dependencies": ["reason-react", "bs-css", "bs-enzyme", "@glennsl/bs-jest"],
   "refmt": 3
 }
