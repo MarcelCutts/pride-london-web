@@ -1,7 +1,5 @@
 open Jest;
 
-Enzyme.configureEnzyme(Enzyme.react_16_adapter());
-
 describe("Goodbye component", () =>
   Expect.(
     test("renders a message", () => {

@@ -32,6 +32,9 @@
   "jest": {
     "testMatch": [
       "**/?(*_)(spec|test).bs.js"
+    ],
+    "setupFiles": [
+      "./src/configuration/jest.config.js"
     ]
   }
 }
