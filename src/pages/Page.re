@@ -2,22 +2,21 @@ let component = ReasonReact.statelessComponent("Page");
 
 module Styles = {
   open Css;
-  let text =
+  let page =
     style([
-      color(red),
+      height(vh(100.0)),
       display(flexBox),
       justifyContent(center),
-      alignContent(center),
+      alignItems(center),
+      flexDirection(column),
     ]);
+  let text = style([color(red), display(flexBox)]);
 };
 
-let make = (~message, _children) => {
+let make =  _children => {
   ...component,
   render: _self =>
-    <div>
-      <div className=Styles.text>
-        (message |> ReasonReact.stringToElement)
-      </div>
-      <div className=Styles.text> <Goodbye name="Alice" /> </div>
-    </div>
+    <div className=Styles.page>
+      <Splash />
+    </div>,
 };
