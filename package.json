@@ -7,7 +7,7 @@
     "clean": "bsb -clean-world",
     "test": "bsb -make-world && jest",
     "test:watch": "bsb -make-world && jest --watch",
-    "dev": "parcel ./src/index.html",
+    "serve": "parcel ./src/index.html",
     "prod": "parcel build ./src/index.html --public-url ./"
   },
   "keywords": [
