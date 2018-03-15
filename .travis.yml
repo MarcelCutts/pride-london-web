@@ -1,3 +1,11 @@
 language: node_js
 node_js:
-  - "8"
+- '8'
+cache: yarn
+script:
+- yarn test
+after_success:
+- $TRAVIS_BRANCH == "master" && yarn ci:deploy
+env:
+  global:
+    secure: C0JHlOefcVTXVsmYQHLTFqwelfbYqCAeakw5rOlLXeLAO7zpvWb8HnUwdY95G8BrqQatjajKpvxk5n62XV0bhM+RnTM+D+X+w67kiMEWwybtaaM9gwvh/9GUWpI4LMc1lbv+xtWtSGp2a6EXKvKsY4fGInIATWEl3cE93aoaL8jS7blpGX9XG2k5Go5tqzT2Qs2aixayX3uUdaMXF22K2xLNVHApi4sspm6xFi4Z/V5IcVEtgOb5zn3x3+ufalksM+biuhuVbxzSP3Fjs1bAAO7qmWoYj0aZ2hYCrdkUwMZ2luKD4lTrKaQAQl/BzCY3AeZJDVs0gX0R9AHIEXgWeVndBvBzaHj/ZcSI9yzFEtdL42cz935mT9jPdlLrI9aX/eqz2UWijx5PqWCoOA1eBxm3V2zxgof64g5QSJmOAwu9HvWdYhHM/B1inLCHYcOJkCiQvJoIDahxdTRR7XGFFJ2zwRwPZpGVwKDEKPVt7iIA45PNYfPapZfsyJSU/MrBQcmX9HAtejPf5iEyXdkw03KIyH3heyn1n1tNkjxckytI8q6D75ijcmHu9oskcK92IAE3QVn1Hnt22sWSt7cgoQWAjvSu90zeoXTc4VkK6RiEuGTJ24eEoNiuC5aFYVWMsidKE0gg8mTnNYHGFwZtvLqYFRUTJ05Gbi9mAJvsfEs=
