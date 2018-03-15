@@ -10,7 +10,7 @@
     "test:watch": "bsb -make-world && jest --watch",
     "serve": "parcel ./src/index.html",
     "deploy": "yarn build:prod && now ./dist -A ../now.json && now alias",
-    "ci:deploy": "yarn build:prod && now ./dist -A ../now.json -e NODE_ENV=production --token $NOW_TOKEN && now alias --token $NOW_TOKEN"
+    "ci:deploy": "yarn build:prod && now ./dist -A ../now.json -e NODE_ENV=production --token $NOW_TOKEN --team=prideinlondon && now alias --token $NOW_TOKEN --team=prideinlondon"
   },
   "keywords": [
     "BuckleScript"
