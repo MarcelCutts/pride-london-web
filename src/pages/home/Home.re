@@ -4,7 +4,7 @@ module Styles = {
   open Css;
   let page =
     style([
-      height(vh(100.0)),
+      height(pct(100.0)),
       display(flexBox),
       justifyContent(center),
       alignItems(center),

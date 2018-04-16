@@ -1,3 +1,11 @@
+module Styles = {
+  open Css;
+  open! Calc;
+  let master =
+    style([height(vh(100.0)), display(flexBox), flexDirection(column)]);
+  let pageContainer = style([height((vh(100.0) - px(50)))]);
+};
+
 type action =
   | UpdatePath(list(string));
 
@@ -41,13 +49,10 @@ let make = _children => {
       )
     },
   render: self =>
-    <div>
+    <div className=Styles.master>
+      <Navigation updatePath=(path => self.send(UpdatePath(path))) />
+      <div className=Styles.pageContainer>
       (lookupPageFromPath(self.state.path))
-      <a href="events"> ("events link" |> ReasonReact.stringToElement) </a>
-      <br />
-      <a href="home"> ("home link" |> ReasonReact.stringToElement) </a>
-      <div onClick=(_e => self.send(UpdatePath(["events"])))>
-        ("goto events" |> ReasonReact.stringToElement)
       </div>
     </div>,
 };
