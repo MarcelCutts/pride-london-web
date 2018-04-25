@@ -14,7 +14,8 @@
   "suffix": ".bs.js",
   "namespace": true,
   "warnings": {
-    "number": "-3"
+    "number": "-44-102-3",
+    "error": "+5"
   },
   "bs-dependencies": ["reason-react", "bs-css", "bs-enzyme", "@glennsl/bs-jest"],
   "refmt": 3
