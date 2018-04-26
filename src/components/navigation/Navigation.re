@@ -10,11 +10,14 @@ let make = (~updatePath, _children) => {
   ...component,
   render: _self =>
     <div className=Styles.navigation>
-      <div className=Styles.navigationLink onClick=(_e => updatePath(["home"]))>
-        ("Home" |> ReasonReact.stringToElement)
+      <div
+        className=Styles.navigationLink onClick=(_e => updatePath(["home"]))>
+        ("Home" |> ReasonReact.string)
       </div>
-      <div className=Styles.navigationLink onClick=(_e => updatePath(["events"]))>
-        ("Events" |> ReasonReact.stringToElement)
+      <div
+        className=Styles.navigationLink
+        onClick=(_e => updatePath(["events"]))>
+        ("Events" |> ReasonReact.string)
       </div>
     </div>,
 };
