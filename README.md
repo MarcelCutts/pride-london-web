@@ -2,6 +2,10 @@
 
 This project is a community effort to release a brand new web platform to supplant and improve upon the product currently available at prideinlondon.org
 
+## Contributing
+
+Want to help out? That's amazing! The [Contribution Guide](https://github.com/MarcelCutts/pride-london-web/blob/master/CONTRIBUTING.md) should hopefully get you on your way.
+
 ## Getting started
 This two core components of this project are [React](https://reactjs.org/) and the [ReasonML](https://reasonml.github.io/) programming language. 
 
@@ -19,15 +23,11 @@ Serving is done by [parcel](https://parceljs.org/), which bundles the JavaScript
 
 The key thing to remember is, 🌟**the compiler is your friend**🌟. Should any errors occur in your code - the compiler will let you know.
 
-### Let's make changes
-
-When programming in ReasonML you will not have to touch the JavaScript itself, you will likely only need to touch the ReasonML files - those files ending in `.re`. As you update the ReasonML files, the lightning fast compiler will generate JavaScript, then bundled by Parcel and served to you. 
-
 ### Let's do testing
 We use the popular [Jest](https://facebook.github.io/jest/) and [Enzyme](http://airbnb.io/enzyme/) libraries to help us test our application. Jest is a test runner, expectation library and more, and Enzyme allows us to easily render our React components in isolation.
 
 #### 🔥 Hot Tip 🔥
-Take advantage of the bananas good compiler errors by keeping the parcel terminal visible while you code. Any errors will be quickly highlighted for you to correct.
+Take advantage of the bananas-good compiler errors by keeping the parcel terminal visible while you code. Any errors will be quickly highlighted for you to correct.
 
 ## Sponsors
 The hosting and continuous deployment is graciously provided by [ZEIT](https://zeit.co).
