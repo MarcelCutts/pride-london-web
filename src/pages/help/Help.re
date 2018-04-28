@@ -4,7 +4,7 @@ let make = _children => {
     ...component,
     render: _self =>
         <div>
-            <Title title="Rico" subtitle="Is one bad motherfucker" />
+            <Title title="Help" subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit" />
         </div>
 };
 
