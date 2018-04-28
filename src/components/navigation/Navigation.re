@@ -16,5 +16,8 @@ let make = (~updatePath, _children) => {
       <div className=Styles.navigationLink onClick=(_e => updatePath(["events"]))>
         ("Events" |> ReasonReact.stringToElement)
       </div>
+      <div className=Styles.navigationLink onClick=(_e => updatePath(["help"]))>
+        ("Help" |> ReasonReact.stringToElement)
+      </div>
     </div>,
 };
