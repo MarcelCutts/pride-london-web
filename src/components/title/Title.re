@@ -2,18 +2,30 @@ let component = ReasonReact.statelessComponent("Title");
 
 module Styles = {
   open Css;
+  let container = style([
+      backgroundColor(hex("AAA")),
+      fontFamily("Roboto, Helvetica, sans-serif"),
+      padding4(px(100), px(0), px(40), px(20)),
+      media("only screen and (min-width: 768px)", [
+            padding3(px(100), px(40), px(20)),
+          ]),
+  ]);
+
   let title = style([
-      border(px(5), solid, hex("000")),
-      padding(px(20)),
-      textAlign(center),
+      fontWeight(700),
+      textAlign(`left),
+  ]);
+
+  let subtitle = style([
+      fontWeight(300)
   ])
 };
 
 let make = (~title, ~subtitle, _children) => {
   ...component,
   render: _self =>
-    <div className=Styles.title>
-      <h1> (title |> ReasonReact.stringToElement) </h1>
-      <h3> (subtitle |> ReasonReact.stringToElement) </h3>
+    <div className=Styles.container>
+      <h1 className=Styles.title> (title |> ReasonReact.stringToElement) </h1>
+      <h3 className=Styles.subtitle> (subtitle |> ReasonReact.stringToElement) </h3>
     </div>,
 };
