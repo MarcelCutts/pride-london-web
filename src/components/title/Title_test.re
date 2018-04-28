@@ -6,6 +6,6 @@ describe("Title component", () => {
         let component = (<Title title="hey" subtitle="rico"/> |> Enzyme.shallow);
         let renderedHeader = component |> Enzyme.find("h1");
 
-        expect(renderedHeader |> Enzyme.text) |> toEqual("London Pride!");
+        expect(renderedHeader |> Enzyme.text) |> toEqual("hey");
     });
 })
