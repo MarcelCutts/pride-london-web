@@ -4,10 +4,9 @@ module Styles = {
   open Css;
   let container = style([
       backgroundColor(hex("AAA")),
-      fontFamily("Roboto, Helvetica, sans-serif"),
-      padding4(px(100), px(0), px(40), px(20)),
+      padding4(~top=px(100), ~right=px(0), ~bottom=px(40), ~left=px(20)),
       media("only screen and (min-width: 768px)", [
-            padding3(px(100), px(40), px(20)),
+            padding3(~top=px(100), ~h=px(40), ~bottom=px(20)),
           ]),
   ]);
 
