@@ -15,6 +15,7 @@ let lookupPageFromPath = path =>
   switch (path) {
   | ["home"] => <Home />
   | ["events"] => <Events />
+  | ["help"] => <Help />
   | _ => <Home />
   };
 

@@ -3,9 +3,9 @@ let component = ReasonReact.statelessComponent("Splash");
 module Styles = {
   open Css;
   let splash = style([
-      border(px(5), solid, hex("000")),
-      padding(px(20)),
-      textAlign(center),
+    border(px(5), solid, hex("000")),
+    padding(px(20)),
+    textAlign(center),
   ])
 };
 
